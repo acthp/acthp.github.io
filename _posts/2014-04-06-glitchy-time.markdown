@@ -285,7 +285,7 @@ Rx is a library from Microsoft that they bill as Reactive Programming, and
 say is built on observer pattern (*urk?*). If you
 look at the methods in the library, it looks a lot like FRP. Netflix has ported
 it to java, and they use it in their client code as well. They've been giving a lot
-of presentions on the subject, billing it as *Functional* Reactive Programming.
+of presentations on the subject, billing it as *Functional* Reactive Programming.
 The library is very actively developed, has hooks for just about any
 framework you'd want to use, and is available on every platform in existence,
 minus epsilon.
