@@ -42,7 +42,7 @@ literature on lenses.
  I rashly replied that a lens implemention in clojure should
 be about fifteen lines of code. Turns out it was closer to eighteen.
 
-https://github.com/acthp/lens/blob/master/src/lens/core.clj
+[lens/core.clj](https://github.com/acthp/lens/blob/master/src/lens/core.clj)
 
 *I'm expecting a haskeller to email me any second telling me I've done
 it all wrong, which is almost certainly true. I interpret haskell by
@@ -50,14 +50,17 @@ fruitlessly staring at code, playing in the compiler for a bit, then
 finding a clojure or javascript port written by someone else. So this
 is a clojure port of my javascript over-simplification of someone else's javascript
 port of one of haskell's lens libraries. I'm sure there's an existing clojure
-lens library that does it all correctly.*
+lens library that does it all correctly. But this version is very, very small.*
 
 The tests includes an example of a trivial component which updates global
-state by performing a mean normalization. You can pretend it's running
-asynchronously in response to user input, but in the test it's just a
-synchronous function call.
+state by performing a mean normalization. It is applied to three different
+cases: an array of integers, a csv of integers, and integers appearing in
+different parts of the global state.
 
-https://github.com/acthp/lens/blob/master/test/lens/core_test.clj
+You can pretend it's running asynchronously in response to user input, but in
+the test it's just a synchronous function call.
+
+[lens/core_test.clj](https://github.com/acthp/lens/blob/master/test/lens/core_test.clj)
 
 I don't believe lenses address Brandon's other complaint, which
 had to do with the problem of combining async and view code, as you
