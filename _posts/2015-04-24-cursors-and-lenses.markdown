@@ -52,10 +52,11 @@ is a clojure port of my javascript over-simplification of someone else's javascr
 port of one of haskell's lens libraries. I'm sure there's an existing clojure
 lens library that does it all correctly. But this version is very, very small.*
 
-The tests includes an example of a trivial component which updates global
+The tests includes an example of a trivial module which updates global
 state by performing a mean normalization. It is applied to three different
 cases: an array of integers, a csv of integers, and integers appearing in
-different parts of the global state.
+different parts of the global state. The module knows nothing about these
+different cases: they all look the same to the module.
 
 You can pretend it's running asynchronously in response to user input, but in
 the test it's just a synchronous function call.
@@ -66,4 +67,4 @@ I don't believe lenses address Brandon's other complaint, which
 had to do with the problem of combining async and view code, as you
 would do if you directly bound an event handler to a cursor update. His
 architecture diagram moved async ops out of the views, via queues,
-and looked a tiny bit like flux.
+and looked a tiny bit like flux from 1000 feet.
